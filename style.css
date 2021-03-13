@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+}
+
+nav,
+footer {
+    height: 50px;
+    background-color: #ff735c;
+}
+
+header {
+    color: #375045;
+
+}
+
+header .picture {
+    height: 65vh;
+    background-image: url(pics/header2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header h1 {
+    text-align: center;
+    padding: 5px 15px;
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+header i {
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+}
+
+main {
+    flex-basis: 1;
+    margin-bottom: 3vh;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: rgb(13, 85, 40);
+    transition: 1s;
+}
+
+section.notUploaded {
+    transform: translateX(-100%);
+}
+
+section .icon {
+    position: relative;
+    background-color: #ff735c;
+    height: 20vh;
+    width: 20vh;
+    margin: 25px 0 5px;
+    border-radius: 50%;
+}
+
+section .icon img {
+    position: absolute;
+    max-width: 70%;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+section .text {
+    background-color: #ddd;
+    width: 80%;
+    border-radius: 5vh;
+    padding: 2vh;
+    text-align: center;
+}
+
+section .text h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    margin-bottom: 1vh;
+    letter-spacing: 1px;
+}
+
+section .text p {
+    font-size: 16px;
+    padding: 0 2%;
+    line-height: 1.4;
+}
+
+.one a {
+    font-weight: 700;
+    color: #943324;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.one a:hover {
+    text-shadow: 0 0 5px #ff735c;
+}
+
+button.back {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(13, 85, 40);
+    bottom: 5vh;
+    right: 5vh;
+    border: none;
+    cursor: pointer;
+    transition: 1s;
+    outline: none;
+}
+
+button.back.notUploaded {
+    transform: scale(0);
+}
+
+button.back i {
+    position: absolute;
+    width: 100%;
+    line-height: 50px;
+    left: 0;
+    top: 0;
+    font-size: 30px;
+    color: #eee;
+}
+
+@media (orientation: portrait) and (min-width: 550px) {
+    header h1 {
+        padding: 15px 15px;
+    }
+}
+
+@media (orientation: portrait) and (min-height: 700px) {
+    header .picture {
+        height: 55vh;
+        background-image: url(pics/header3.png);
+    }
+
+    section .icon {
+        height: 18vh;
+        width: 18vh;
+    }
+}
+
+@media (orientation: portrait) and (min-height: 1024px) {
+    section .text h1 {
+        font-size: 24px;
+    }
+
+    section .text p {
+        font-size: 18px;
+    }
+}
+
+@media (orientation: landscape) {
+    header {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    header .picture {
+        flex-basis: 45%;
+    }
+
+    header .title {
+        flex-basis: 55%;
+        align-self: center;
+    }
+
+    section {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        margin: 5vh 0
+    }
+
+    section .icon {
+        margin: 5px 0;
+    }
+
+    section .text {
+        width: 70%;
+        margin-left: 2vw;
+    }
+}
+
+
+@media (orientation: landscape) and (min-width: 800px) {
+    header .picture {
+        flex-basis: 40%;
+        background-image: url(pics/header3.png);
+    }
+
+    header .title {
+        flex-basis: 60%;
+        align-self: center;
+    }
+}
+
+@media (orientation: landscape) and (min-height: 415px) {
+    section .icon {
+        height: 18vh;
+        width: 18vh;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    header h1 {
+        padding: 5px 25px;
+        font-size: 36px;
+    }
+
+    header i {
+        font-size: 30px;
+    }
+
+    section .icon {
+        height: 14vh;
+        width: 14vh;
+    }
+
+    section .text p {
+        font-size: 18px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+    header h1 {
+        font-size: 40px;
+    }
+
+    section .icon {
+        height: 12vh;
+        width: 12vh;
+    }
+
+    section .text h1 {
+        font-size: 26px;
+    }
+
+    section .text p {
+        font-size: 20px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1440px) {
+    header h1 {
+        font-size: 54px;
+    }
+}
